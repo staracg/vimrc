@@ -19,6 +19,11 @@ snippet ctf
 	# -*- coding: utf-8 -*-
 	from pwn import *
 	import re
+	
+	context.arch = 'amd64'
+	context.os = 'linux'
+	context.log_level = 'debug'
+	context.terminal = ['terminator', '-x', 'bash', '-c']
 
 	host = "127.0.0.1"
 	port = 8888
